@@ -60,21 +60,21 @@ label {
 #mc_embed_signup input.required, #mc_embed_signup input:focus {
     color: white;
     background: none;
-    border: 1px solid rgba(255,255,255,.3);
-    outline: 0;
+    border: 2px solid rgba(255,255,255,.4);
     border-radius: 5px;
     margin-bottom: 15px;
     font-size: 1.3em;
     width: 100%;
-    font-family: "GothamRoundedLight";
+    font-family: "GothamRoundedBook";
 }
 
 .required_label {
     float: right;
     display: inline-block;
     font-size: .75em;
-    color: rgba(255,255,255,.2);
+    color: rgba(200,43,55,1);
     letter-spacing: 2px;
+    font-family: "GothamRoundedBold";
 }
 
 input#mc-embedded-subscribe.button {

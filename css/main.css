@@ -38,8 +38,18 @@ html, body {
     max-height: 200px;
 }
 
+#thank_you {
+    color: white;
+}
+
 label, input {
     font-family: "GothamRoundedMedium";
+}
+
+h2 {
+    font-family: "GothamRoundedBook";
+    text-align: center;
+    padding: 30px;
 }
 
 label {

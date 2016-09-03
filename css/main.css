@@ -1,0 +1,99 @@
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+html, body {
+    background: #323232;
+    width: 100%;
+}
+
+#main_logo {
+    display: block;
+    max-width: 50%;
+    margin: 0px auto;
+    margin-top: 70px;
+    max-height: 200px;
+}
+
+label, input {
+    font-family: "GothamRoundedMedium";
+}
+
+label {
+    padding-bottom: 5px;
+    font-size: 1em;
+}
+
+#mc_embed_signup{
+    color: white;
+    margin: 30px auto;
+    clear:left; font:14px Helvetica,Arial,sans-serif;  width:250px;
+    margin-top: 30px;
+    background: rgba(0,0,0,.3);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+#mc_embed_signup input.required, #mc_embed_signup input:focus {
+    color: white;
+    background: none;
+    border: 1px solid rgba(255,255,255,.3);
+    outline: 0;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    width: 100%;
+    font-family: "GothamRoundedLight";
+}
+
+.required_label {
+    float: right;
+    display: inline-block;
+    font-size: .75em;
+    color: rgba(255,255,255,.2);
+    letter-spacing: 2px;
+}
+
+input#mc-embedded-subscribe.button {
+    color: #323232;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 30px 0px 30px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 1.25em;
+    -webkit-appearance: none;
+}
+
+@media (max-width: 480px) {
+    #main_logo {
+        max-width: 80%;
+    }
+}

@@ -44,10 +44,12 @@ html, body {
 
 label, input {
     font-family: "GothamRoundedMedium";
+    font-weight: 400;
 }
 
 h2 {
     font-family: "GothamRoundedBook";
+    font-weight: 300;
     text-align: center;
     padding: 30px;
 }
@@ -68,6 +70,8 @@ label {
 }
 
 #mc_embed_signup input.required, #mc_embed_signup input:focus {
+    font-family: "GothamRoundedBook";
+    font-weight: 300;
     color: white;
     background: none;
     border: 2px solid rgba(255,255,255,.4);
@@ -75,19 +79,22 @@ label {
     margin-bottom: 15px;
     font-size: 1.3em;
     width: 100%;
-    font-family: "GothamRoundedBook";
 }
 
 .required_label {
+    font-family: "GothamRoundedBold";
+    font-weight: 700;
     float: right;
     display: inline-block;
     font-size: .75em;
     color: rgba(200,43,55,1);
     letter-spacing: 2px;
-    font-family: "GothamRoundedBold";
 }
 
-input#mc-embedded-subscribe.button {
+input#mc-embedded-subscribe.button,
+input#mc-embedded-subscribe.button:focus {
+    font-family: "GothamRoundedMedium";
+    font-weight: 400;
     color: #323232;
     background: white;
     border: none;
@@ -100,6 +107,7 @@ input#mc-embedded-subscribe.button {
     margin-top: 20px;
     font-size: 1.25em;
     -webkit-appearance: none;
+    width: auto;
 }
 
 @media (max-width: 480px) {

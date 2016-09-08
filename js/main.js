@@ -24,3 +24,9 @@ $( "#mce-LNAME" ).on('input', function() {
         $("#mce-LNAME-required").show();
     }
 });
+
+$( "#sign_up" ).on('click', function() {
+    $('html, body').animate({
+        scrollTop: $(".section.signup").offset().top
+    }, 250);
+});

@@ -1,117 +1,164 @@
-/**
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
+/******************/
+/* GLOBAL STYLES */
+/******************/
 
-.cf:after {
-    clear: both;
-}
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.cf {
-    *zoom: 1;
-}
-
-html, body {
+body, html {
+    margin: 0;
     background: #323232;
+}
+
+body, label, button, input {
+    font-family: "GothamRoundedMedium";
+    font-weight: 400;
+    color: #FFF;
+}
+
+.section {
     width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    display: table;
+}
+
+.section.intro {
+    background: url("../img/gear_bg.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.section.signup {
+    background: url("../img/sign_up_bg.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.wrapper {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 #main_logo {
-    display: block;
-    max-width: 50%;
-    margin: 0px auto;
-    margin-top: 70px;
-    max-height: 200px;
+    max-width: 70%;
+    max-height: 300px;
 }
 
-#thank_you {
-    color: white;
+h1#headline {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .35rem;
+    padding: 3rem;
+    line-height: 2.5rem;
 }
 
-label, input {
+#subheadline {
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    font-family: "GothamRoundedBook";
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+
+/******************/
+/* BUTTON STYLES */
+/******************/
+
+button#sign_up,
+input#mc-embedded-subscribe.button,
+input#mc-embedded-subscribe.button:focus,
+input#mc-embedded-subscribe.button:hover {
+    background: rgba(200,43,55,1);
+    border: none;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    letter-spacing: .3rem;
+    padding: 1rem 2rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: auto;
     font-family: "GothamRoundedMedium";
     font-weight: 400;
+    margin: 0;
 }
 
-h2 {
-    font-family: "GothamRoundedBook";
-    font-weight: 300;
-    text-align: center;
-    padding: 30px;
+button#sign_up {
+    margin: 2rem;
 }
 
-label {
-    padding-bottom: 5px;
-    font-size: 1em;
+button#sign_up:hover,
+input#mc-embedded-subscribe.button:hover {
+    background: white;
+    color: rgba(200,43,55,1);
 }
+
+/****************/
+/* FORM STYLES */
+/***************/
 
 #mc_embed_signup{
-    color: white;
-    margin: 30px auto;
-    clear:left; font:14px Helvetica,Arial,sans-serif;  width:250px;
-    margin-top: 30px;
-    background: rgba(0,0,0,.3);
-    padding: 30px;
+    display: inline-block;
+    padding: 2rem;
+    background: rgba(0,0,0,.6);
     border-radius: 15px;
+    margin-bottom: 2rem;
 }
 
-#mc_embed_signup input.required, #mc_embed_signup input:focus {
-    font-family: "GothamRoundedBook";
+#mc_embed_signup input.required,
+#mc_embed_signup input:focus {
+    font-family: "GothamRoundedLight";
     font-weight: 300;
-    color: white;
+    font-size: 1.3rem;
     background: none;
     border: 2px solid rgba(255,255,255,.4);
     border-radius: 5px;
-    margin-bottom: 15px;
-    font-size: 1.3em;
-    width: 100%;
+    width: 250px;
+    padding: .75rem;
+    margin-bottom: 2.25rem;
+}
+
+label {
+    padding: 0rem 0rem .75rem 0rem;
+    text-align: left;
+    display: block;
 }
 
 .required_label {
-    font-family: "GothamRoundedBold";
-    font-weight: 700;
     float: right;
-    display: inline-block;
-    font-size: .75em;
     color: rgba(200,43,55,1);
-    letter-spacing: 2px;
+    letter-spacing: .2rem;
+    font-size: .75rem;
+    line-height: 1rem;
 }
 
-input#mc-embedded-subscribe.button,
-input#mc-embedded-subscribe.button:focus {
-    font-family: "GothamRoundedMedium";
-    font-weight: 400;
-    color: #323232;
-    background: white;
-    border: none;
-    border-radius: 5px;
-    height: 40px;
-    line-height: 40px;
-    padding: 0px 30px 0px 30px;
-    display: block;
-    margin: auto;
-    margin-top: 20px;
-    font-size: 1.25em;
-    -webkit-appearance: none;
-    width: auto;
-}
-
-@media (max-width: 480px) {
+@media (max-width: 420px) {
     #main_logo {
-        max-width: 80%;
+        max-width: 70%;
+    }
+    #mc_embed_signup input.required,
+    #mc_embed_signup input:focus {
+       width: 200px;
+    }
+    h1#headline {
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: .35rem;
+        padding: 1rem 1rem;
+    }
+
+}
+
+@media (max-height: 640px) {
+    #main_logo {
+        max-height: 150px;
+    }
+
+    h1#headline {
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: .35rem;
+        padding: 1.5rem 1.5rem;
     }
 }

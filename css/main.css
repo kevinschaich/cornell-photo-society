@@ -100,7 +100,7 @@ input#mc-embedded-subscribe.button:hover {
 
 #mc_embed_signup{
     display: inline-block;
-    padding: 2rem;
+    padding: 3rem;
     background: rgba(0,0,0,.6);
     border-radius: 15px;
     margin-bottom: 2rem;
@@ -136,6 +136,9 @@ label {
 @media (max-width: 420px) {
     #main_logo {
         max-width: 70%;
+    }
+    #mc_embed_signup{
+        padding: 3rem;
     }
     #mc_embed_signup input.required,
     #mc_embed_signup input:focus {

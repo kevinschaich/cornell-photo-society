@@ -30,3 +30,7 @@ $( "#sign_up" ).on('click', function() {
         scrollTop: $(".section.signup").offset().top
     }, 250);
 });
+
+$( "#sign_up_thanks" ).on('click', function() {
+    document.location.href= "/";
+});

@@ -65,6 +65,7 @@ h1#headline {
 /******************/
 
 button#sign_up,
+button#sign_up_thanks,
 input#mc-embedded-subscribe.button,
 input#mc-embedded-subscribe.button:focus,
 input#mc-embedded-subscribe.button:hover {
@@ -84,11 +85,13 @@ input#mc-embedded-subscribe.button:hover {
     margin: 0;
 }
 
-button#sign_up {
+button#sign_up,
+button#sign_up_thanks {
     margin: 2rem;
 }
 
 button#sign_up:hover,
+button#sign_up_thanks:hover,
 input#mc-embedded-subscribe.button:hover {
     background: white;
     color: rgba(200,43,55,1);

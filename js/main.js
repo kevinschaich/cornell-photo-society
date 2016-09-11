@@ -32,5 +32,6 @@ $( "#sign_up" ).on('click', function() {
 });
 
 $( "#sign_up_thanks" ).on('click', function() {
+    console.log("thanks");
     document.location.href= "/";
 });

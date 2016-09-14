@@ -24,14 +24,23 @@ $( "#mce-LNAME" ).on('input', function() {
         $("#mce-LNAME-required").show();
     }
 });
+$(document).ready(function() {
+    function scrollTo(div) {
+        $('html, body').animate({
+            scrollTop: $("#" + div).offset().top
+        }, 250);
+        window.location.hash = $("#" + div).attr("id");
+    };
 
-$( "#sign_up" ).on('click', function() {
-    $('html, body').animate({
-        scrollTop: $(".section.signup").offset().top
-    }, 250);
-});
+    $( "#sign_up_button" ).on('click', function() {
+        scrollTo("signup");
+    });
+    $( "a.scrollable" ).on('click', function(event) {
+        scrollTo($(this).attr("href").substring(1));
+    });
 
-$( "#sign_up_thanks" ).on('click', function() {
-    console.log("thanks");
-    document.location.href= "/";
+    $( "#go_back" ).on('click', function() {
+        document.location.href= "/";
+    });
+
 });

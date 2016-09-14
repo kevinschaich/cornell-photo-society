@@ -27,16 +27,41 @@ body, label, button, input {
     -o-background-size: cover;
     background-size: cover;
 }
-.section.signup {
+
+.section.about {
+    background: url("../img/arts_bg.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.section.gallery {
     background: url("../img/sign_up_bg.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+
+.section.signup {
+    background: url("../img/arts_bg2.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .wrapper {
     display: table-cell;
     vertical-align: middle;
+    padding: 4rem 0;
+    width: 100%;
+}
+
+.wrapper p, a h1, h2 {
+    margin: 0px auto;
+    max-width: 768px;
 }
 
 #main_logo {
@@ -44,28 +69,75 @@ body, label, button, input {
     max-height: 300px;
 }
 
-h1#headline {
-    font-size: 2rem;
+h1 {
+    font-size: 3rem;
+    padding: 0 3rem 0 3rem;
+    font-family: "GothamRoundedLight";
+    font-weight: 100;
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}
+
+h2 {
+    font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: .35rem;
-    padding: 3rem;
+    padding: 4rem 3rem 0 3rem;
     line-height: 2.5rem;
 }
 
-#subheadline {
+h3 {
+    font-family: "GothamRoundedLight";
+    font-weight: 100;
+    padding-bottom: 4rem;
     font-size: 1.5rem;
-    padding: 1rem 3rem;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    padding: 3rem;
+}
+
+a {
+    color: white;
     font-family: "GothamRoundedBook";
     font-weight: 300;
-    letter-spacing: .05rem;
+    font-size: 1.25rem;
+    padding: 0 0 3px 0;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: rgba(200,43,55,1);
+    border-bottom: 1px solid rgba(200,43,55,1);
+}
+
+.link_centered {
+    min-width: 150px;
+    display: inline-block;
+    letter-spacing: .15rem;
+    margin: 0 1rem 2rem 1rem;
+}
+
+p {
+    font-family: "GothamRoundedBook";
+    font-weight: 300;
+    line-height: 1.5rem;
+    padding: 4rem 3rem 0 3rem;
+    font-size: 1.25rem;
+    text-align: justify;
 }
 
 /******************/
 /* BUTTON STYLES */
 /******************/
 
-button#sign_up,
-button#sign_up_thanks,
+button,
+button#sign_up_button,
+button#sign_up_button_thanks,
 input#mc-embedded-subscribe.button,
 input#mc-embedded-subscribe.button:focus,
 input#mc-embedded-subscribe.button:hover {
@@ -85,13 +157,13 @@ input#mc-embedded-subscribe.button:hover {
     margin: 0;
 }
 
-button#sign_up,
-button#sign_up_thanks {
+button#sign_up_button,
+button#sign_up_button_thanks {
     margin: 2rem;
 }
 
-button#sign_up:hover,
-button#sign_up_thanks:hover,
+button#sign_up_button:hover,
+button#sign_up_button_thanks:hover,
 input#mc-embedded-subscribe.button:hover {
     background: white;
     color: rgba(200,43,55,1);
@@ -106,7 +178,7 @@ input#mc-embedded-subscribe.button:hover {
     padding: 3rem;
     background: rgba(0,0,0,.6);
     border-radius: 15px;
-    margin-bottom: 2rem;
+    margin: 4rem 0;
 }
 
 #mc_embed_signup input.required,
@@ -123,7 +195,7 @@ input#mc-embedded-subscribe.button:hover {
 }
 
 label {
-    padding: 0rem 0rem .75rem 0rem;
+    padding: 0 0 .75rem 0;
     text-align: left;
     display: block;
 }
@@ -136,6 +208,10 @@ label {
     line-height: 1rem;
 }
 
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+
 @media (max-width: 420px) {
     #main_logo {
         max-width: 70%;
@@ -147,11 +223,21 @@ label {
     #mc_embed_signup input:focus {
        width: 200px;
     }
-    h1#headline {
+    h1 {
         font-size: 2rem;
+        padding: 1rem;
+    }
+    h2 {
+        font-size: 1.25rem;
         text-transform: uppercase;
         letter-spacing: .35rem;
-        padding: 1rem 1rem;
+        padding: 1rem;
+    }
+    p {
+        padding: 1rem 3rem;
+    }
+    .link_centered {
+        margin: 1rem 0;
     }
 
 }
@@ -160,11 +246,16 @@ label {
     #main_logo {
         max-height: 150px;
     }
-
-    h1#headline {
+    h1 {
         font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.25rem;
         text-transform: uppercase;
         letter-spacing: .35rem;
-        padding: 1.5rem 1.5rem;
+        padding: 1.5rem;
+    }
+    p {
+        padding: 1rem 3rem;
     }
 }

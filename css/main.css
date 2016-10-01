@@ -44,6 +44,14 @@ body, label, button, input {
     background-size: cover;
 }
 
+.section.contact {
+    background: url("../img/sign_up_bg.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .section.signup {
     background: url("../img/arts_bg2.jpg") no-repeat center center;
     -webkit-background-size: cover;
@@ -173,7 +181,7 @@ input#mc-embedded-subscribe.button:hover {
 /* FORM STYLES */
 /***************/
 
-#mc_embed_signup{
+#embed_form{
     display: inline-block;
     padding: 3rem;
     background: rgba(0,0,0,.6);
@@ -181,8 +189,8 @@ input#mc-embedded-subscribe.button:hover {
     margin: 4rem 0;
 }
 
-#mc_embed_signup input.required,
-#mc_embed_signup input:focus {
+#embed_form input.required,
+#embed_form input:focus {
     font-family: "GothamRoundedLight";
     font-weight: 300;
     font-size: 1.3rem;
@@ -207,6 +215,19 @@ label {
     font-size: .75rem;
     line-height: 1rem;
 }
+input.message{
+    font-family: "GothamRoundedLight";
+    font-weight: 300;
+    font-size: 1.3rem;
+    background: none;
+    border: 2px solid rgba(255,255,255,.4);
+    border-radius: 5px;
+    width: 250px;
+    height: 250px;
+    padding: .75rem;
+    margin-bottom: 2.25rem;
+
+}
 
 /*****************/
 /* MEDIA QUERIES */
@@ -216,11 +237,11 @@ label {
     #main_logo {
         max-width: 70%;
     }
-    #mc_embed_signup{
+    #embed_form{
         padding: 3rem;
     }
-    #mc_embed_signup input.required,
-    #mc_embed_signup input:focus {
+    #embed_form input.required,
+    #embed_form input:focus {
        width: 200px;
     }
     h1 {
@@ -230,7 +251,7 @@ label {
     h2 {
         font-size: 1.25rem;
         text-transform: uppercase;
-        letter-spacing: .35rem;
+        mc_embed_signup_scrolletter-spacing: .35rem;
         padding: 1rem;
     }
     p {

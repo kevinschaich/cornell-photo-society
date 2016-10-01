@@ -39,7 +39,8 @@
                 <div id="scroll_links">
                     <span class="link_centered"><a class="scrollable" href="#about">About Us</a></span>
                     <span class="link_centered"><a class="scrollable" href="#gallery">Gallery</a></span>
-                    <span class="link_centered"><a href="mailto:hello@cornell.photo">Contact</a></span>
+                    <span class="link_centered"><a class="scrollable" href="#contact">Contact Us</a></span>
+                    <!--span class="link_centered"><a href="mailto:hello@cornell.photo">Contact</a></span-->
                 </div>
                 <button id="sign_up_button">Sign Up</button>
             </div>
@@ -62,40 +63,86 @@
             </div>
         </div>
 
+
         <div class="section signup" id="signup">
             <div class="wrapper signup">
                 <h1>Sign Up</h1>
                 <!-- Begin MailChimp Signup Form -->
-                <div id="mc_embed_signup">
-                    <form action="//photo.us14.list-manage.com/subscribe/post?u=b189a0af22c81f36c054524bd&amp;id=a2f893088a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                        <div id="mc_embed_signup_scroll">
-                    <div class="mc-field-group">
-                        <label for="mce-EMAIL">Email Address  <span class="required_label" id='mce-EMAIL-required'>REQUIRED</span>
-                    </label>
-                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-                    </div>
-                    <div class="mc-field-group">
-                        <label for="mce-FNAME">First Name  <span class="required_label" id='mce-FNAME-required'>REQUIRED</span>
-                    </label>
-                        <input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
-                    </div>
-                    <div class="mc-field-group">
-                        <label for="mce-LNAME">Last Name  <span class="required_label" id='mce-LNAME-required'>REQUIRED</span>
-                    </label>
-                        <input type="text" value="" name="LNAME" class="required" id="mce-LNAME">
-                    </div>
-                        <div id="mce-responses" class="clear">
-                            <div class="response" id="mce-error-response" style="display:none"></div>
-                            <div class="response" id="mce-success-response" style="display:none"></div>
-                        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b189a0af22c81f36c054524bd_a2f893088a" tabindex="-1" value=""></div>
-                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                <div id="embed_form">
+                    <div id="mc_embed_signup">
+
+                        <form action="//photo.us14.list-manage.com/subscribe/post?u=b189a0af22c81f36c054524bd&amp;id=a2f893088a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
+                        <div class="mc-field-group">
+                            <label for="mce-EMAIL">Email Address  <span class="required_label" id='mce-EMAIL-required'>REQUIRED</span>
+                        </label>
+                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
                         </div>
-                    </form>
+                        <div class="mc-field-group">
+                            <label for="mce-FNAME">First Name  <span class="required_label" id='mce-FNAME-required'>REQUIRED</span>
+                        </label>
+                            <input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
+                        </div>
+                        <div class="mc-field-group">
+                            <label for="mce-LNAME">Last Name  <span class="required_label" id='mce-LNAME-required'>REQUIRED</span>
+                        </label>
+                            <input type="text" value="" name="LNAME" class="required" id="mce-LNAME">
+                        </div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b189a0af22c81f36c054524bd_a2f893088a" tabindex="-1" value=""></div>
+                            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
                 <!--End mc_embed_signup-->
             </div>
         </div>
+                <div class="section contact" id="contact">
+            <div class="wrapper contact">
+                <h1>Contact Us</h1>
+                <h3>Send us an email at <a href="mailto:hello@cornell.photo">hello@cornell.photo</a> or use the sign up form below</h3>
+                <div id="embed_form">
+                    <form action="https://formspree.io/photocornell@gmail.com"
+                          method="POST">
+                          <!--
+                        <input type="text" name="name">
+                        <input type="email" name="_replyto">
+                        <input type="text" name="_message">
+                        <input type="submit" value="Send">
+                        -->
+
+                        <div id="fs_contact_form">
+                            <div class="mc-field-group">
+                                <label for="mce-EMAIL">Name  <span class="required_label" id='mce-NAME-required'>REQUIRED</span>
+                            </label>
+                                <input type="text" value="" name="name" class="required email" id="mce-NAME">
+                            </div>
+                            <div class="mc-field-group">
+                                <label for="mce-FNAME">Email  <span class="required_label" id='mce-EMAIL-required'>REQUIRED</span>
+                            </label>
+                                <input type="email" value="" name="_replyto" class="required" id="mce-EMAIL">
+                            </div>
+                            <div class="mc-field-group">
+                                <label for="mce-LNAME">Message <span class="required_label" id='mce-MSG-required'>REQUIRED</span>
+                            </label>
+                                <input type="text" value="" name="message" class=" message" id="mce-MSG">
+                            </div>
+
+
+                            <div class="clear"><input type="submit" value="Send" id="mc-embedded-subscribe" class="button"></div>
+                        </div>
+                        <!-- END fs_contact_form-->
+
+
+                    </form> 
+                </div>
+           </div>
+        </div>
+
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>

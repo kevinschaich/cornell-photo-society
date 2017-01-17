@@ -20,7 +20,7 @@ body, label, button, input, textarea {
     display: table;
 }
 
-.section.intro {
+.section.intro, .section.contact {
     background: url("../img/gear_bg.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;

@@ -1,40 +1,30 @@
-$( "#mce-EMAIL" ).on('input', function() {
-    if ($("#mce-EMAIL").val() != "") {
-        $("#mce-EMAIL-required").hide();
+$( ".required" ).on('input', function() {
+    if ($(this).val() != "") {
+        $(this).parent().find(".required_label").hide();
     }
     else {
-        $("#mce-EMAIL-required").show();
+        $(this).parent().find(".required_label").show();
     }
 });
 
-$( "#mce-FNAME" ).on('input', function() {
-    if ($("#mce-FNAME").val() != "") {
-        $("#mce-FNAME-required").hide();
-    }
-    else {
-        $("#mce-FNAME-required").show();
-    }
-});
-
-$( "#mce-LNAME" ).on('input', function() {
-    if ($("#mce-LNAME").val() != "") {
-        $("#mce-LNAME-required").hide();
-    }
-    else {
-        $("#mce-LNAME-required").show();
-    }
-});
 $(document).ready(function() {
     function scrollTo(div) {
         $('html, body').animate({
             scrollTop: $("#" + div).offset().top
         }, 250);
-        window.location.hash = $("#" + div).attr("id");
+
+        if (div == 'intro') {
+            window.location.hash = '';
+        }
+        else {
+            window.location.hash = $("#" + div).attr("id");
+        }
     };
 
     $( "#sign_up_button" ).on('click', function() {
         scrollTo("signup");
     });
+
     $( "a.scrollable" ).on('click', function(event) {
         scrollTo($(this).attr("href").substring(1));
     });
@@ -43,4 +33,5 @@ $(document).ready(function() {
         document.location.href= "/";
     });
 
+    scrollTo(Url.hash() || 'intro');
 });

@@ -7,7 +7,7 @@ body, html {
     background: #323232;
 }
 
-body, label, button, input {
+body, label, button, input, textarea {
     font-family: "GothamRoundedMedium";
     font-weight: 400;
     color: #FFF;
@@ -109,6 +109,10 @@ a {
     border-bottom: 1px solid white;
     text-decoration: none;
 }
+h2 a {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
 
 a:hover, a:active {
     color: rgba(200,43,55,1);
@@ -173,7 +177,7 @@ input#mc-embedded-subscribe.button:hover {
 /* FORM STYLES */
 /***************/
 
-#mc_embed_signup{
+.form-group{
     display: inline-block;
     padding: 3rem;
     background: rgba(0,0,0,.6);
@@ -181,8 +185,10 @@ input#mc-embedded-subscribe.button:hover {
     margin: 4rem 0;
 }
 
-#mc_embed_signup input.required,
-#mc_embed_signup input:focus {
+.form-group input.required,
+.form-group input:focus,
+.form-group textarea.required,
+.form-group textarea.required:focus {
     font-family: "GothamRoundedLight";
     font-weight: 300;
     font-size: 1.3rem;
@@ -192,6 +198,11 @@ input#mc-embedded-subscribe.button:hover {
     width: 250px;
     padding: .75rem;
     margin-bottom: 2.25rem;
+}
+
+.form-group textarea.required,
+.form-group textarea.required:focus {
+    font-size: 1.0rem;
 }
 
 label {
@@ -216,11 +227,13 @@ label {
     #main_logo {
         max-width: 70%;
     }
-    #mc_embed_signup{
+    .form-group{
         padding: 3rem;
     }
-    #mc_embed_signup input.required,
-    #mc_embed_signup input:focus {
+    .form-group input.required,
+    .form-group input:focus,
+    .form-group textarea.required,
+    .form-group textarea.required:focus {
        width: 200px;
     }
     h1 {

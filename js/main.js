@@ -8,10 +8,14 @@ $( ".required" ).on('input', function() {
 });
 
 $(document).ready(function() {
+
+    new WOW().init();
+
     function scrollTo(div) {
-        $('html, body').animate({
-            scrollTop: $("#" + div).offset().top
-        }, 250);
+        // $('html, body').animate({
+        //     scrollTop: $("#" + div).offset().top
+        // }, 250);
+        $('html, body').scrollTop($("#" + div).offset().top);
 
         if (div == 'intro') {
             window.location.hash = '';
@@ -33,5 +37,5 @@ $(document).ready(function() {
         document.location.href= "/";
     });
 
-    scrollTo(Url.hash() || 'intro');
+    // scrollTo(Url.hash() || 'intro');
 });

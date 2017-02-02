@@ -1,188 +1,185 @@
-/******************/
-/* GLOBAL STYLES */
-/******************/
-
-body, html {
-    margin: 0;
-    background: #323232;
+body,
+html,
+{
+    background: #fff
 }
 
-body, label, button, input, textarea {
+body,
+button,
+input,
+label,
+textarea {
     font-family: "GothamRoundedMedium";
     font-weight: 400;
-    color: #FFF;
+    color: #fff
 }
 
-.section {
-    width: 100%;
-    min-height: 100vh;
-    text-align: center;
-    display: table;
-}
-
-.section.intro, .section.contact {
-    background: url("../img/gear_bg.jpg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.section.about {
-    background: url("../img/arts_bg.jpg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.section.gallery {
-    background: url("../img/sign_up_bg.jpg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.section.signup {
-    background: url("../img/arts_bg2.jpg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.wrapper {
-    display: table-cell;
-    vertical-align: middle;
-    padding: 4rem 0;
-    width: 100%;
-}
-
-.wrapper p, a h1, h2 {
-    margin: 0px auto;
-    max-width: 768px;
-}
-
-#main_logo {
-    max-width: 70%;
-    max-height: 300px;
+input,
+label,
+textarea {
+    color: #555;
 }
 
 h1 {
     font-size: 3rem;
-    padding: 0 3rem 0 3rem;
     font-family: "GothamRoundedLight";
     font-weight: 100;
-    letter-spacing: .05rem;
-    text-transform: uppercase;
     letter-spacing: .3rem;
 }
 
+a,
+h1,
 h2 {
-    font-size: 1.5rem;
-    text-transform: uppercase;
+    text-transform: uppercase
+}
+
+h2 {
     letter-spacing: .35rem;
-    padding: 4rem 3rem 0 3rem;
     line-height: 2.5rem;
+    padding: 32pt 32pt 0 32pt;
 }
 
-h3 {
-    font-family: "GothamRoundedLight";
-    font-weight: 100;
-    padding-bottom: 4rem;
-    font-size: 1.5rem;
+#main_logo {
+    padding: 0 0 56pt 0;
+    max-width: 70%;
+    max-height: 300px
 }
 
-.intro h2 {
+.intro h1 {
+    font-family: "GothamRoundedMedium";
+    font-weight: 400;
     font-size: 2rem;
-    padding: 3rem;
+    padding: 0 16pt 56pt 16pt;
+}
+
+h2,
+h2 a {
+    font-size: 1.5rem;
 }
 
 a {
-    color: white;
+    color: #fff;
     font-family: "GothamRoundedBook";
     font-weight: 300;
     font-size: 1.25rem;
-    padding: 0 0 3px 0;
-    text-transform: uppercase;
-    border-bottom: 1px solid white;
-    text-decoration: none;
-}
-h2 a {
-    font-weight: 900;
-    font-size: 1.5rem;
+    border-bottom: 1px solid #fff;
+    text-decoration: none
 }
 
-a:hover, a:active {
-    color: rgba(200,43,55,1);
-    border-bottom: 1px solid rgba(200,43,55,1);
+h2 a {
+    font-weight: 900
+}
+
+a:active,
+a:hover {
+    color: #c82b37;
+    border-bottom: 1px solid #c82b37
 }
 
 .link_centered {
     min-width: 150px;
     display: inline-block;
     letter-spacing: .15rem;
-    margin: 0 1rem 2rem 1rem;
+    padding-bottom: 56pt;
 }
 
-p {
-    font-family: "GothamRoundedBook";
-    font-weight: 300;
-    line-height: 1.5rem;
-    padding: 4rem 3rem 0 3rem;
-    font-size: 1.25rem;
-    text-align: justify;
+.section-wrapper {
+    padding: 56pt 0;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
 }
 
-/******************/
-/* BUTTON STYLES */
-/******************/
-
-button,
-button#sign_up_button,
-button#sign_up_button_thanks,
-input#mc-embedded-subscribe.button,
-input#mc-embedded-subscribe.button:focus,
-input#mc-embedded-subscribe.button:hover {
-    background: rgba(200,43,55,1);
-    border: none;
-    text-transform: uppercase;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 1.25rem;
-    letter-spacing: .3rem;
-    padding: 1rem 2rem;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: auto;
-    font-family: "GothamRoundedMedium";
-    font-weight: 400;
-    margin: 0;
+.section {
+    /* fallback for older browsers */
+    background: url(../img/gear.jpg) no-repeat center center;
+    /* newer browsers: color gradient with image */
+    background: linear-gradient(to bottom right, hsla(210, 100%, 35%, 0.85), hsla(180, 100%, 50%, 0.85)), url(../img/gear.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
 }
 
-button#sign_up_button,
-button#sign_up_button_thanks {
-    margin: 2rem;
+.section.about {
+    background: #fff;
+    color: #555;
+}
+
+.section.intro {
+    min-height: 100vh;
+    /*    margin-bottom: -60px;
+    box-sizing: border-box;
+    min-height: 100vh;*/
+}
+
+.section.about .bullet {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin: 40pt 56pt 0 56pt;
+    box-sizing: border-box;
+}
+
+.section.about .bullet img {
+    width: 100px;
+    padding-bottom: 32pt;
+}
+
+.section.about .bullet h2 {
+    padding: 0 0 16pt 0;
+}
+
+.section.about .bullet p {
+    margin: 0 auto;
+    display: inline-block;
+    font-family: "Karla";
+    font-weight:400;
+    font-weight: 100;
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 250px;
+    letter-spacing: -.04rem;
+    word-spacing: -.02rem;
+    line-height: 1.7rem
+}
+
+.section.signup {
+    /* fallback for older browsers */
+    background: url(../img/aerial.jpg) no-repeat center center;
+    /* newer browsers: color gradient with image */
+    background: linear-gradient(to bottom right, hsla(20, 100%, 40%, 0.85), hsla(50, 100%, 50%, 0.85)), url(../img/aerial.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
+}
+
+.section.contact {
+    /* fallback for older browsers */
+    background: url(../img/stadium.jpg) no-repeat center center;
+    /* newer browsers: color gradient with image */
+    background: linear-gradient(to bottom right, hsla(360, 100%, 40%, 0.85), hsla(320, 100%, 50%, 0.85)), url(../img/stadium.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
 }
 
 button#sign_up_button:hover,
 button#sign_up_button_thanks:hover,
-input#mc-embedded-subscribe.button:hover {
-    background: white;
-    color: rgba(200,43,55,1);
+.submit-button:hover {
+    background: #fff;
+    color: #555;
 }
 
-/****************/
-/* FORM STYLES */
-/***************/
-
-.form-group{
+.form-group {
+    color: #555;
+    margin-top: 40pt;
     display: inline-block;
-    padding: 3rem;
-    background: rgba(0,0,0,.6);
-    border-radius: 15px;
-    margin: 4rem 0;
+    padding: 32pt;
+    background: rgba(255, 255, 255, .75);
+    border-radius: 8pt;
 }
 
 .form-group input.required,
@@ -191,84 +188,71 @@ input#mc-embedded-subscribe.button:hover {
 .form-group textarea.required:focus {
     font-family: "GothamRoundedLight";
     font-weight: 300;
-    font-size: 1.3rem;
-    background: none;
-    border: 2px solid rgba(255,255,255,.4);
-    border-radius: 5px;
+    font-size: 1rem;
+    background: 0;
+    border: 2px solid rgba(0, 0, 0, .1);
+    border-radius: 4pt;
     width: 250px;
-    padding: .75rem;
-    margin-bottom: 2.25rem;
+    padding: 8pt;
+    margin: 0 0 32pt 0;
 }
 
 .form-group textarea.required,
 .form-group textarea.required:focus {
-    font-size: 1.0rem;
+    font-size: 1rem
+}
+
+
+button,
+button#sign_up_button,
+button#sign_up_button_thanks,
+.submit-button,
+.submit-button:focus,
+.submit-button:hover {
+    background: none;
+    border: 2px solid #fff;
+    padding: 8pt 16pt;
+    text-transform: uppercase;
+    border-radius: 4pt;
+    cursor: pointer;
+    font-size: 1.25rem !important;
+    letter-spacing: .3rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: "GothamRoundedMedium" !important;
+    font-weight: 400 !important;
+}
+
+.form-group .submit-button,
+.form-group .submit-button:focus {
+    color: #555;
+    border: 2px solid #555;
+    margin: 0;
 }
 
 label {
-    padding: 0 0 .75rem 0;
+    color: #555;
+    padding: 0 0 8pt 0;
     text-align: left;
-    display: block;
+    display: block
 }
 
 .required_label {
     float: right;
-    color: rgba(200,43,55,1);
-    letter-spacing: .2rem;
+    color: #c82b37;
+    letter-spacing: .15rem;
     font-size: .75rem;
-    line-height: 1rem;
+    line-height: 1rem
 }
 
-/*****************/
-/* MEDIA QUERIES */
-/*****************/
-
-@media (max-width: 420px) {
-    #main_logo {
-        max-width: 70%;
-    }
-    .form-group{
-        padding: 3rem;
-    }
+@media (max-width:420px) {
     .form-group input.required,
     .form-group input:focus,
     .form-group textarea.required,
     .form-group textarea.required:focus {
-       width: 200px;
-    }
-    h1 {
-        font-size: 2rem;
-        padding: 1rem;
-    }
-    h2 {
-        font-size: 1.25rem;
-        text-transform: uppercase;
-        letter-spacing: .35rem;
-        padding: 1rem;
-    }
-    p {
-        padding: 1rem 3rem;
-    }
-    .link_centered {
-        margin: 1rem 0;
-    }
-
-}
-
-@media (max-height: 640px) {
-    #main_logo {
-        max-height: 150px;
-    }
-    h1 {
-        font-size: 2rem;
-    }
-    h2 {
-        font-size: 1.25rem;
-        text-transform: uppercase;
-        letter-spacing: .35rem;
-        padding: 1.5rem;
-    }
-    p {
-        padding: 1rem 3rem;
+        width: 200px
     }
 }
+
+@media (max-height:640px) {}
+
